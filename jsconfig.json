@@ -4,5 +4,5 @@
       "@/*": ["./*"]
     }
   },
-  "exclude": ["admin"]
+  "exclude": ["app/admin"]
 }

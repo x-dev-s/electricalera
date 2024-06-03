@@ -1,7 +1,7 @@
 'use server'
 import fs from 'fs'
-import { ContentFilePath, DataDirPath, ImageDirPath } from '../../layout';
-import { FetchProducts } from '../../admin/api/fetch-products';
+import { ContentFilePath, DataDirPath, ImageDirPath } from '../../../layout';
+import { FetchProducts } from '../api/fetch-products';
 
 export async function AddPost(prevState, formData) {
     const name = formData.get('title');

@@ -1,6 +1,6 @@
 'use server'
 import fs from 'fs'
-import {DataDirPath, ContentFilePath} from '../../layout'
+import {DataDirPath, ContentFilePath} from '../../../layout'
 
 export async function AddCategory(prevState, formData) {
     const cat = formData.get('name');

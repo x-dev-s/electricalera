@@ -2,7 +2,7 @@
 import fs from 'fs';
 import { FetchAnalytics } from "./api/fetch-analytics";
 import { FetchSeoData, InspectUrl, TestUrl, FetchSitemapList, FetchSitemap } from "./api/fetch-seodata";
-import { DataDirPath } from '../layout';
+import { DataDirPath } from '../../layout';
 
 
 

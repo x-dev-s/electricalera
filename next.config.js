@@ -2,10 +2,9 @@
 const nextConfig = {
   output: "standalone",
   reactStrictMode: true,
-  distDir: "output",
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
   /**
    *

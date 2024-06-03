@@ -1,10 +1,6 @@
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
-export async function GET(req, { params }) {
+export async function FetchAnalytics(dimensions, metrics, dateRanges) {
     // 👇 Setting PropertyId
-    let dimensions = params.dimensions;
-    let metrics = params.metrics;
-    let dateRanges = params.dataranges;
-
     const propertyId = process.env.GA_PROPERTY_ID;
     const analyticsDataClient = new BetaAnalyticsDataClient({
         credentials: {
