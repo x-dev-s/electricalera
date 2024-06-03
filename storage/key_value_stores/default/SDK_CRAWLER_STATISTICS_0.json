@@ -1,0 +1,50 @@
+{
+  "requestsFinished": 0,
+  "requestsFailed": 10,
+  "requestsRetries": 10,
+  "requestsFailedPerMinute": 52,
+  "requestsFinishedPerMinute": 0,
+  "requestMinDurationMillis": null,
+  "requestMaxDurationMillis": 0,
+  "requestTotalFailedDurationMillis": 823,
+  "requestTotalFinishedDurationMillis": 0,
+  "crawlerStartedAt": "2024-01-05T07:46:43.200Z",
+  "crawlerFinishedAt": "2024-01-05T07:46:54.583Z",
+  "statsPersistedAt": "2024-01-05T07:46:54.583Z",
+  "crawlerRuntimeMillis": 11427,
+  "crawlerLastStartTimestamp": 1704440803156,
+  "requestRetryHistogram": [
+    null,
+    null,
+    null,
+    10
+  ],
+  "statsId": 0,
+  "requestAvgFailedDurationMillis": 82,
+  "requestAvgFinishedDurationMillis": null,
+  "requestTotalDurationMillis": 823,
+  "requestsTotal": 10,
+  "requestsWithStatusCode": {},
+  "errors": {
+    "action-browser": {
+      "ENOENT": {
+        "Error": {
+          "ENOENT: no such file or directory, open 'C:\\Work\\Web_development\\electricalera\\output\\server\\vendor-chunks\\data_files\\headers-order.json'": {
+            "count": 10
+          }
+        }
+      }
+    }
+  },
+  "retryErrors": {
+    "action-browser": {
+      "ENOENT": {
+        "Error": {
+          "ENOENT: no such file or directory, open 'C:\\Work\\Web_development\\electricalera\\output\\server\\vendor-chunks\\data_files\\headers-order.json'": {
+            "count": 30
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+user-agent: *
+Disallow: /admin.php
+Disallow: /connection.php
+
+sitemap: https://electricalera.com/sitemap.xml
