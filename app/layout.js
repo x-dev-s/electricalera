@@ -20,9 +20,10 @@ env.PROJECT_API_KEY = "AIzaSyBjS-YHJlss3lIvOxEqF_UM5t8R0x6jx08";
 // export const runtime = 'nodejs'
 // export const preferredRegion = 'auto'
 // export const maxDuration = 5
-export const ImageDirPath = "C:/Work/Web_development/electricalera/public/images";
-export const DataDirPath = "C:/Work/Web_development/electricalera/public/data";
-export const ContentFilePath = "C:/Work/Web_development/electricalera/public/data/content.json";
+console.log(process.cwd())
+export const ImageDirPath = path.join(process.cwd(), 'public/images');
+export const DataDirPath = path.join(process.cwd(), 'public/data');
+export const ContentFilePath = path.join(process.cwd(), 'public/data/content.json');
 export const Loading1 = <img src='/images/loading.gif' style={{ width: '30px', height: '30px' }} alt='Loading...' />
 export const Loading2 = <img src='/images/loading2.gif' style={{ width: '30px', height: '30px', mixBlendMode: 'color-burn' }} alt='Loading...' />
 const inter = Inter({ subsets: ['latin'] })
