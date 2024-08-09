@@ -41,6 +41,7 @@ export default function Admin() {
     // const [totalCategories, setTotalCategories] = useState(Loading2);
 
     useEffect(() => {
+        console.log(process.cwd());
         // document.head.appendChild(document.createElement('script')).src = 'https://cdn.plot.ly/plotly-2.29.1.min.js';
         const Plotly = require('plotly.js-dist');
         // (async () => {

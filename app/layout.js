@@ -20,7 +20,6 @@ env.PROJECT_API_KEY = "AIzaSyBjS-YHJlss3lIvOxEqF_UM5t8R0x6jx08";
 // export const runtime = 'nodejs'
 // export const preferredRegion = 'auto'
 // export const maxDuration = 5
-console.log(process.cwd())
 export const ImageDirPath = path.join(process.cwd(), 'public/images');
 export const DataDirPath = path.join(process.cwd(), 'public/data');
 export const ContentFilePath = path.join(process.cwd(), 'public/data/content.json');
