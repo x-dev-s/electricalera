@@ -108,13 +108,13 @@ export async function GetSavedData(filePath) {
   return data.toString();
 }
 
-export async function GetContentFileData(filePath) {}
+export async function GetContentFileData(filePath) { }
 
 export async function GetAnalytics(dimensions, metrics, dateRanges, filePath) {
   return GetSavedData(filePath)
     .then((content) => {
       content = JSON.parse(content);
-      if (content && content.data.length > 0 && (new Date()).getTime() - (new Date(content.date)).getTime() < 1 * 24 * 60 * 60 * 1000) {
+      if (content && content.data.length > 0 && (new Date()).getTime() - (new Date(content.date)).getTime() < 999 * 24 * 60 * 60 * 1000) { //replace 999 by 1
         return content.data;
       }
       else {
@@ -132,15 +132,17 @@ export async function GetSeoData(domain, startDate, endDate, dimensions, rowLimi
   return GetSavedData(filePath)
     .then((content) => {
       content = JSON.parse(content);
-      if (content && content.data.length > 0 && (new Date()).getTime() - (new Date(content.date)).getTime() < 1 * 24 * 60 * 60 * 1000) {
+      if (content && content.data && content.data.length > 0 && (new Date()).getTime() - (new Date(content.date)).getTime() < 999 * 24 * 60 * 60 * 1000) { // replace 999 by 1
         return content.data;
       }
       else {
         return FetchSeoData(domain, startDate, endDate, dimensions, rowLimit)
           .then((res) => {
-            let saveData = { date: new Date().toLocaleDateString('en-CA'), data: res.rows };
-            SaveData(filePath, JSON.stringify(saveData));
-            return res.rows;
+            if (res.rows) {
+              let saveData = { date: new Date().toLocaleDateString('en-CA'), data: res.rows };
+              SaveData(filePath, JSON.stringify(saveData));
+              return res.rows;
+            }
           });
       }
     });
@@ -150,7 +152,7 @@ export async function GetSiteInspectionResponse(domain, urls, dates) {
   return GetSavedData('/savedData/urlInspectionTableData.json')
     .then((content) => {
       content = JSON.parse(content);
-      if (content && content.data.length > 0 && (new Date()).getTime() - (new Date(content.date)).getTime() < 7 * 24 * 60 * 60 * 1000) {
+      if (content && content.data.length > 0 && (new Date()).getTime() - (new Date(content.date)).getTime() < 999 * 24 * 60 * 60 * 1000) { // replace 999 by 7
         return content.data;
       }
       else {
